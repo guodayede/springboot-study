@@ -1,5 +1,7 @@
 # 关于springboot的学习
 ## springboot学习
+### spring bean生命周期
+- [springboo-bean](https://github.com/guodayede/springboot-study/tree/master/springboot-bean)
 
 ## netty学习
 ### 1.netty入门demo（一）
