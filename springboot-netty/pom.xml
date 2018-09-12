@@ -35,11 +35,11 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/io.netty/netty-all -->
         <dependency>
             <groupId>io.netty</groupId>
             <artifactId>netty-all</artifactId>
-            <version>RELEASE</version>
-            <scope>compile</scope>
+            <version>4.1.29.Final</version>
         </dependency>
     </dependencies>
 
