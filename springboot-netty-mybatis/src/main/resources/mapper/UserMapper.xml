@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gyc.mapper.UserMapper">
+    <resultMap id="BaseResultMap" type="com.gyc.entity.User">
+        <id property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="password" column="password"/>
+        <result property="age" column="age"/>
+        <result property="birthday" column="birthday"/>
+    </resultMap>
+    <select id="selectAll" resultMap="BaseResultMap">
+        select
+                *
+        from
+                user
+    </select>
+
+</mapper>
