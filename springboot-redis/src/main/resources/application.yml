@@ -1,0 +1,13 @@
+spring:
+  redis:
+    host: 111.231.252.246
+    database: 0
+    password: gyc123
+    lettuce:
+      pool:
+        max-active: 8
+        min-idle: 0
+        max-wait: 10s
+        max-idle: 8
+server:
+  port: 8081

@@ -1,0 +1,12 @@
+endpoints:
+  health:
+    id: chealth
+    sensitive: false
+management:
+  security:
+    enabled: false
+info:
+  app:
+    name: Spring Sample Application
+    description: This is my first spring boot application
+    version: 1.0.0
