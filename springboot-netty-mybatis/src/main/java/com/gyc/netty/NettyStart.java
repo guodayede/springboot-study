@@ -24,7 +24,10 @@ public class NettyStart {
 
     private EventLoopGroup bossGroup = new NioEventLoopGroup();
     private EventLoopGroup workGroup = new NioEventLoopGroup();
-
+    /**
+     * 启动netty服务
+     * @throws InterruptedException
+     */
     @PostConstruct
     public void start() throws InterruptedException {
         ServerBootstrap b=new ServerBootstrap();
@@ -42,7 +45,6 @@ public class NettyStart {
             System.out.println("启动 Netty 成功");
         }
     }
-
     /**
      * 销毁
      */
