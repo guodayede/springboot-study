@@ -1,0 +1,3 @@
+push:
+  server:
+    port: 9092
