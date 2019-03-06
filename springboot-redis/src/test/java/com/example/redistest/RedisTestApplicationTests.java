@@ -1,5 +1,6 @@
 package com.example.redistest;
 
+import com.example.redistest.model.User;
 import org.databene.contiperf.PerfTest;
 import org.databene.contiperf.junit.ContiPerfRule;
 import org.junit.Rule;
@@ -17,6 +18,8 @@ import javax.annotation.Resource;
 public class RedisTestApplicationTests {
     @Resource
     private StringRedisTemplate stringRedisTemplate;
+    @Resource
+    private RedisTemplate<String,Object> redisTemplate;
     @Rule
     public ContiPerfRule i = new ContiPerfRule();
 
@@ -24,6 +27,9 @@ public class RedisTestApplicationTests {
     @PerfTest(invocations = 1, threads = 1)
     public void test() {
 
+        redisTemplate.opsForValue().set("aa",new User("测试",23));
+        Object aa = redisTemplate.opsForValue().get("aa");
+        System.out.println(aa.toString());
     }
 
     @Test
