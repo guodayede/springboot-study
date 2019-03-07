@@ -1,12 +1,41 @@
-endpoints:
-  health:
-    id: chealth
-    sensitive: false
-management:
-  security:
-    enabled: false
-info:
-  app:
-    name: Spring Sample Application
-    description: This is my first spring boot application
-    version: 1.0.0
+spring:
+  datasource:
+    druid:
+      url: jdbc:mysql://111.231.252.246:3306/test?useUnicode=true&characterEncoding=utf-8&useSSL=false
+      username: root
+      password: gyc123
+      driver-class-name: com.mysql.jdbc.Driver
+      initial-size: 5
+      max-active: 30
+      min-idle: 2
+      max-wait: 1234
+      pool-prepared-statements: true
+      max-pool-prepared-statement-per-connection-size: 5
+#    driver-class-name: com.mysql.jdbc.Driver
+mybatis-plus:
+#  config-location: classpath:/mapper/*.xml
+  type-aliases-package: com.example.demo.model
+  configuration:
+    # 驼峰下划线转换
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+    call-setters-on-nulls: true
+  global-config:
+      # 刷新mapper 调试神器
+    refresh: true
+    banner: false
+      #数据库大写下划线转换
+      #capital-mode: true
+      #序列接口实现类配置
+      #key-generator: com.baomidou.springboot.xxx
+      # 数据库相关配置
+    db-config:
+      db-type: mysql
+        # 主键类型  AUTO:"数据库ID自增", INPUT:"用户输入ID",ID_WORKER:"全局唯一ID (数字类型唯一ID)", UUID:"全局唯一ID UUID";
+      id-type: auto
+        # 字段策略 IGNORED:"忽略判断",NOT_NULL:"非 NULL 判断"),NOT_EMPTY:"非空判断"
+      field-strategy: not_empty
+      capital-mode: true
+        #逻辑删除配置
+      logic-delete-value: 1
+      logic-not-delete-value: 0
