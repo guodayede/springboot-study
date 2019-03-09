@@ -1,9 +1,9 @@
 spring:
   datasource:
     druid:
-      url: jdbc:mysql://111.231.252.246:3306/test?useUnicode=true&characterEncoding=utf-8&useSSL=false
+      url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf-8&useSSL=false
       username: root
-      password: gyc123
+      password: 123
       driver-class-name: com.mysql.jdbc.Driver
       initial-size: 5
       max-active: 30
