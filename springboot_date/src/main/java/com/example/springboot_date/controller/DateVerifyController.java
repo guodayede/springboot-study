@@ -1,6 +1,8 @@
 package com.example.springboot_date.controller;
 
-import com.gyc.timedataverify.model.DateModelNoAnnotation;
+
+import com.example.springboot_date.model.DateModelNoAnnotation;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
 
