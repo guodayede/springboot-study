@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
  * @title: AsyncTest
  * @projectName test
  * @date 2019/11/1314:06
- * @description: TODO
+ * @description:
  */
 @Component
 public class AsyncTest {

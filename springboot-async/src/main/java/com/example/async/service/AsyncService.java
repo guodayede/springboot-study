@@ -5,7 +5,7 @@ package com.example.async.service;
  * @title: AsyncService
  * @projectName test
  * @date 2019/11/1312:31
- * @description: TODO
+ * @description:
  */
 public interface AsyncService {
     /**
