@@ -12,6 +12,9 @@
 4. springboot处理date参数
 - [项目地址](https://github.com/guodayede/springboot-study/tree/master/springboot_date)
 - [文章地址](https://www.guoyuchuan.com/springboot/2019/09/02/springboot%E5%A4%84%E7%90%86date%E5%8F%82%E6%95%B0/)
+5. springboot异步线程
+- [项目地址](https://github.com/guodayede/springboot-study/tree/master/springboot-async)
+- [文章地址](https://www.guoyuchuan.com/springboot/%E5%BC%82%E6%AD%A5/%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/java/2019/11/13/springboot%E5%BC%82%E6%AD%A5%E7%BA%BF%E7%A8%8B/)
 
 ## netty学习
 1. netty学习（一）netty入门demo
