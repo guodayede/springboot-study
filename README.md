@@ -12,6 +12,9 @@
 4. springboot异步线程
 - [项目地址](https://github.com/guodayede/springboot-study/tree/master/springboot-async)
 - [文章地址](https://www.guoyuchuan.com/springboot/%E5%BC%82%E6%AD%A5/%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/java/2019/11/13/springboot%E5%BC%82%E6%AD%A5%E7%BA%BF%E7%A8%8B/)
+5. springboot异步线程（二）
+- [项目地址](https://github.com/guodayede/springboot-study/tree/master/springboot-async)
+- [文章地址](https://www.guoyuchuan.com/springboot/%E5%BC%82%E6%AD%A5/%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/java/2019/12/16/springboot%E5%BC%82%E6%AD%A5%E7%BA%BF%E7%A8%8B(%E4%BA%8C))
 
 ## netty学习
 1. netty学习（一）netty入门demo
