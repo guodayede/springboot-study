@@ -19,18 +19,17 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/test")
 public class TestController {
     private static final Logger log= LoggerFactory.getLogger(TestController.class);
+    private final AsyncService asyncService;
+
     @Autowired
-    private AsyncService asyncService;
+    public TestController(AsyncService asyncService) {
+        this.asyncService = asyncService;
+    }
+
     @GetMapping
     public String test(){
-        //获取开始时间
-        long startTime = System.currentTimeMillis();
         asyncService.testAsync();
-//        asyncService.testAsync();
-//        asyncService.testAsync();
-        //获取结束时间
-        long endTime = System.currentTimeMillis();
-        log.info("========test==controller运行时间=========="+(endTime - startTime));
+        asyncService.testOne();
         return "SUCCESS";
     }
 }

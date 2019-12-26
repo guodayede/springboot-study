@@ -18,46 +18,31 @@ import org.springframework.stereotype.Service;
 @Service
 public class AsyncServiceImpl implements AsyncService {
     private static final Logger log= LoggerFactory.getLogger(AsyncServiceImpl.class);
+    private final AsyncTest asyncTest;
+
     @Autowired
-    private AsyncTest asyncTest;
+    public AsyncServiceImpl(AsyncTest asyncTest) {
+        this.asyncTest = asyncTest;
+    }
+
     @Override
     public void testAsync(){
-        //获取开始时间
-        long startTime = System.currentTimeMillis();
-        asyncTest.testOne();
-        asyncTest.testTwo();
-        asyncTest.testThree();
-        //获取结束时间
-        long endTime = System.currentTimeMillis();
-        log.info("========test运行时间=========="+(endTime - startTime)+"====="+Thread.currentThread().getName());
+        /*try {
+            Thread.sleep(1000*60);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }*/
+        log.info("========testAsync运行=========="+Thread.currentThread().getName());
+        log.info("========testAsync是否守护线程=========="+Thread.currentThread().isDaemon());
     }
-    @Async
+    @Override
     public void testOne(){
+       /* try {
+            Thread.sleep(1000*60);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }*/
         log.info("ThreadName:===one===="+Thread.currentThread().getName());
-        try {
-            Thread.sleep(1000*60);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        log.info("守护线程:===one===="+Thread.currentThread().isDaemon());
     }
-    @Async
-    public void testTwo(){
-        log.info("ThreadName:====two===="+Thread.currentThread().getName());
-        try {
-            Thread.sleep(1000*60);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-    }
-    @Async
-    public void testThree(){
-        log.info("ThreadName:====three===="+Thread.currentThread().getName());
-        try {
-            Thread.sleep(1000*60);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-    }
-
-
 }

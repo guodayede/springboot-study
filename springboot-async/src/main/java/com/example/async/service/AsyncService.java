@@ -1,5 +1,8 @@
 package com.example.async.service;
 
+
+import org.springframework.scheduling.annotation.Async;
+
 /**
  * @author gyc
  * @title: AsyncService
@@ -11,6 +14,12 @@ public interface AsyncService {
     /**
      * 测试
      */
-//    @Async("asyncTaskExecutor")
+    @Async
     void testAsync();
+
+    /**
+     *测试一
+     */
+    @Async
+    void testOne();
 }

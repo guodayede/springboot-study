@@ -3,6 +3,7 @@ package com.example.async.config;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.task.AsyncTaskExecutor;
+import org.springframework.core.task.SimpleAsyncTaskExecutor;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 
 /**
@@ -12,10 +13,10 @@ import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
  * @date 2019/11/715:19
  * @description:
  */
-@Configuration
+//@Configuration
 public class AsyncConfig {
-    @Bean
-    public AsyncTaskExecutor asyncTaskExecutor() {
+    /*@Bean
+    public AsyncTaskExecutor testTaskExecutor() {
         ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();
         //线程池名的前缀：设置好了之后可以方便我们定位处理任务所在的线程池
         executor.setThreadNamePrefix("courses-schedule-");
@@ -32,4 +33,10 @@ public class AsyncConfig {
         executor.initialize();
         return executor;
     }
+    @Bean
+    public SimpleAsyncTaskExecutor simpleAsyncTaskExecutor(){
+        SimpleAsyncTaskExecutor simpleAsyncTaskExecutor = new SimpleAsyncTaskExecutor();
+        simpleAsyncTaskExecutor.setConcurrencyLimit(1);
+        return simpleAsyncTaskExecutor;
+    }*/
 }

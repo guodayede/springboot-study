@@ -10,10 +10,8 @@ import org.springframework.scheduling.annotation.EnableScheduling;
  */
 @SpringBootApplication
 @EnableAsync
-@EnableScheduling
 public class AsyncApplication {
     public static void main(String[] args) {
         SpringApplication.run(AsyncApplication.class, args);
     }
-
 }
