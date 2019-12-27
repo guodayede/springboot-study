@@ -14,12 +14,12 @@ public interface AsyncService {
     /**
      * 测试
      */
-    @Async
+    @Async("threadPoolTaskExecutor")
     void testAsync();
 
     /**
      *测试一
      */
-    @Async
+    @Async("concurrentTaskExecutor")
     void testOne();
 }

@@ -11,15 +11,13 @@ import java.lang.reflect.Method;
  * @date 2019/12/2611:38
  * @description:
  */
-public class AsyncExceptionHandler {
-
-    /*@Override
+public class AsyncExceptionHandler implements AsyncUncaughtExceptionHandler {
+    @Override
     public void handleUncaughtException(Throwable throwable, Method method, Object... obj) {
-
         System.out.println("Exception Cause - " + throwable.getMessage());
         System.out.println("Method name - " + method.getName());
         for (Object param : obj) {
             System.out.println("Parameter value - " + param);
         }
-    }*/
+    }
 }

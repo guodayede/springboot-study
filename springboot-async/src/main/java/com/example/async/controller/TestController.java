@@ -18,9 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/test")
 public class TestController {
-    private static final Logger log= LoggerFactory.getLogger(TestController.class);
     private final AsyncService asyncService;
-
     @Autowired
     public TestController(AsyncService asyncService) {
         this.asyncService = asyncService;

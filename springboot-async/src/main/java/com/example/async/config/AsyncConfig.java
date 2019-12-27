@@ -1,10 +1,18 @@
 package com.example.async.config;
 
+import com.example.async.handler.AsyncExceptionHandler;
+import org.springframework.aop.interceptor.AsyncUncaughtExceptionHandler;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.task.AsyncTaskExecutor;
 import org.springframework.core.task.SimpleAsyncTaskExecutor;
+import org.springframework.core.task.TaskExecutor;
+import org.springframework.scheduling.annotation.AsyncConfigurer;
+import org.springframework.scheduling.concurrent.ConcurrentTaskExecutor;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
+
+import java.util.concurrent.Executor;
+import java.util.concurrent.Executors;
 
 /**
  * @author gyc
@@ -13,10 +21,10 @@ import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
  * @date 2019/11/715:19
  * @description:
  */
-//@Configuration
-public class AsyncConfig {
-    /*@Bean
-    public AsyncTaskExecutor testTaskExecutor() {
+@Configuration
+public class AsyncConfig implements AsyncConfigurer {
+    @Override
+    public Executor getAsyncExecutor() {
         ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();
         //线程池名的前缀：设置好了之后可以方便我们定位处理任务所在的线程池
         executor.setThreadNamePrefix("courses-schedule-");
@@ -30,13 +38,11 @@ public class AsyncConfig {
         executor.setKeepAliveSeconds(60);
         // 当线程池已满,且等待队列也满了的时候,直接抛弃当前线程(不会抛出异常)
 //        executor.setRejectedExecutionHandler(new ThreadPoolExecutor.AbortPolicy());
-        executor.initialize();
+//        executor.initialize();
         return executor;
     }
-    @Bean
-    public SimpleAsyncTaskExecutor simpleAsyncTaskExecutor(){
-        SimpleAsyncTaskExecutor simpleAsyncTaskExecutor = new SimpleAsyncTaskExecutor();
-        simpleAsyncTaskExecutor.setConcurrencyLimit(1);
-        return simpleAsyncTaskExecutor;
-    }*/
+    @Override
+    public AsyncUncaughtExceptionHandler getAsyncUncaughtExceptionHandler() {
+        return new AsyncExceptionHandler();
+    }
 }
