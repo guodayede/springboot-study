@@ -19,8 +19,8 @@
 6. springboot定时器(一)
 -[项目地址](https://github.com/guodayede/springboot-study)
 -[文章地址](https://www.guoyuchuan.com/java/springboot/2020/05/23/springboot%E5%AE%9A%E6%97%B6%E5%99%A8(%E4%B8%80)/)
-7. MethodInterceptor 的几种用法
-- [项目地址](https://github.com/guodayede/springboot-study/tree/master/method-interceptor)
+7. MethodInterceptor 的几种用法  
+- [项目地址](https://github.com/guodayede/springboot-study/tree/master/method-interceptor)  
 - [文章地址](https://www.guoyuchuan.com/java/springboot/spring/2020/06/06/MethodInterceptor-%E7%9A%84%E5%87%A0%E7%A7%8D%E7%94%A8%E6%B3%95/)
 
 
